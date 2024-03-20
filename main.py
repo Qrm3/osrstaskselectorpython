@@ -4,12 +4,14 @@
 import tkinter as tk
 from ui.ui import MainWindow
 
-# Create root
+# Create root top level window
 root = tk.Tk()
-# root.title('OSRS Task Selector')
 
+
+# Create an instance of MainWindow 
 main_window = MainWindow(root)
 main_window.master.title('OSRS Task Selector')
+main_window.master.minsize(800, 600)
 
 if __name__ == "__main__":
     main_window.mainloop()
