@@ -12,8 +12,7 @@ class MainWindow(tk.Frame):
         
         self.grid_columnconfigure(0, weight=1)
 
-    def create_widgets(self):
-        
+    def create_widgets(self):        
         self.quit_button = tk.Button(self, text='Quit', command=self.quit)
         self.quit_button.grid(sticky=tk.NSEW)
 
