@@ -13,9 +13,6 @@ class MainWindow(tk.Frame):
         self.grid_columnconfigure(0, weight=1)
 
     def create_widgets(self):        
-        self.quit_button = tk.Button(self, text='Quit', command=self.quit)
-        self.quit_button.grid(sticky=tk.NSEW)
-
         self.current_task_labelframe = tk.LabelFrame(self, padx=2, pady=2, text='Current Task')
         self.current_task_labelframe.grid_columnconfigure(0, weight=1)
         self.current_task_labelframe.grid(sticky=tk.EW)
