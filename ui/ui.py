@@ -21,7 +21,7 @@ class MainWindow(tk.Frame):
         self.current_task_label = tk.Label(self.current_task_labelframe, text="Placeholder Text", anchor=tk.W, width=50)
         self.current_task_label.grid(sticky=tk.EW)
         
-        # Task         
+        # Task Buttons        
         self.task_button_frame = tk.Frame(self, padx=2, pady=2)
         self.task_button_frame.grid(sticky=tk.E)
         
