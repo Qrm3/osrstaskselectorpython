@@ -33,3 +33,19 @@ class MainWindow(tk.Frame):
 
         self.complete_task_button = tk.Button(self.task_button_frame, text="Complete Task")
         self.complete_task_button.grid(column=2, row=0)
+
+        # New Task
+        self.new_task_labelframe = tk.LabelFrame(self, padx=2, pady=2, text='New Task')
+        self.new_task_labelframe.columnconfigure(0, weight=1)
+        self.new_task_labelframe.grid(sticky=tk.EW)
+        
+        self.new_task_textbox = tk.Text(self.new_task_labelframe, height=1, padx=2, pady=2, takefocus=0)
+        self.new_task_textbox.grid(sticky=tk.EW)
+        
+        # New Task buttons
+        self.new_task_button_frame = tk.Frame(self, padx=2, pady=2)
+        self.new_task_button_frame.grid(sticky=tk.E)
+        
+        self.create_task_button = tk.Button(self.new_task_button_frame, text='Create Task')
+        self.create_task_button.grid(column=0, row=0)
+        
