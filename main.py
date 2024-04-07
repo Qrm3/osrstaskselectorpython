@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 # Main entry point
-# for later : https://docs.python.org/3/library/tkint.html
+# for later : https://docs.python.org/3/library/tkinter.html
 import tkinter as tk
 from ui.ui import MainWindow
 
