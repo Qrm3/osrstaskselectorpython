@@ -18,9 +18,11 @@ class MainWindow(tk.Frame):
         self.current_task_labelframe.grid_columnconfigure(0, weight=1)
         self.current_task_labelframe.grid(sticky=tk.EW)
 
-        self.current_task_label = tk.Label(self.current_task_labelframe, text="Placeholder Text", anchor=tk.W, width=50, border='1')
-        self.current_task_label.grid(sticky=tk.EW)
+        self.current_task_name_label = tk.Label(self.current_task_labelframe, text="Current Task Name")
+        self.current_task_name_label.grid(sticky=tk.EW)
         
+        self.current_task_description_label = tk.Label(self.current_task_labelframe, padx=2, pady=2, anchor=tk.W, text="Current Task Description")
+        self.current_task_description_label.grid(sticky=tk.EW)
         # Task Buttons        
         self.task_button_frame = tk.Frame(self, padx=2, pady=2)
         self.task_button_frame.grid(sticky=tk.E)
