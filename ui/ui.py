@@ -14,7 +14,7 @@ class MainWindow(tk.Frame):
 
     def create_widgets(self):        
         ### Current Task
-        self.current_task_labelframe = tk.LabelFrame(self, padx=2, pady=2, text='Current Task')
+        self.current_task_labelframe = tk.LabelFrame(self, padx=2, pady=2, text="Current Task")
         self.current_task_labelframe.grid_columnconfigure(0, weight=1)
         self.current_task_labelframe.grid(sticky=tk.EW)
         # Task Name
@@ -57,4 +57,13 @@ class MainWindow(tk.Frame):
         # Create Task
         self.create_task_button = tk.Button(self, text="Create Task")
         self.create_task_button.grid(sticky=tk.E)
+        ### Completed Tasks
+        self.completed_task_labelframe = tk.LabelFrame(self, padx=2, pady=2, text="Completed Tasks")
+        self.completed_task_labelframe.grid(sticky=tk.EW)
+        # Completed Task
+        self.completed_task_yscrollbar = tk.Scrollbar(self.completed_task_labelframe, orient=tk.VERTICAL)
+        self.completed_task_yscrollbar.grid(column=1, row=0, sticky=tk.NS)
+        
+        self.completed_task_listbox = tk.Listbox(self.completed_task_labelframe, activestyle="none", yscrollcommand=self.completed_task_yscrollbar)
+        self.completed_task_listbox.grid(column=0, row=0)
         
