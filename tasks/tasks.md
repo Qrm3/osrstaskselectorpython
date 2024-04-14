@@ -23,3 +23,4 @@ A task that can be worked on 'passively'.
  * Time Completed
  * Number of completions
  * Category
+ * Number of skips
