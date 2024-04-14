@@ -20,13 +20,15 @@ class MainWindow(tk.Frame):
         # tabs
         self.current_task_tab = ttk.Frame(self.notebook)
         self.current_task_tab.columnconfigure(0, weight=1)
-        self.completed_task_tab = ttk.Frame(self.notebook)
+        
         self.create_task_tab = ttk.Frame(self.notebook)
+        
+        self.completed_task_tab = ttk.Frame(self.notebook)
         
         # add tabs
         self.notebook.add(self.current_task_tab, text="Current Task")
-        self.notebook.add(self.completed_task_tab, text="Completed Tasks")
         self.notebook.add(self.create_task_tab, text="Create Task")
+        self.notebook.add(self.completed_task_tab, text="Completed Tasks")
         
         self.notebook.grid(sticky=tk.NSEW)
         
@@ -38,6 +40,20 @@ class MainWindow(tk.Frame):
         # label        
         self.current_task_label = ttk.Label(self.current_task_labelframe, text="Test Placeholder Text")
         self.current_task_label.grid(sticky=tk.EW)
+        
+        # button frame
+        self.current_task_button_frame = ttk.Frame(self.current_task_tab)
+        self.current_task_button_frame.grid(sticky=tk.E)
+        
+        # buttons
+        self.get_task_button = ttk.Button(self.current_task_button_frame, text="Get Task")
+        self.get_task_button.grid(column=0, row=0)
+        
+        self.skip_task_button = ttk.Button(self.current_task_button_frame, text="Skip Task")
+        self.skip_task_button.grid(column=1, row=0)
+        
+        self.complete_task_button = ttk.Button(self.current_task_button_frame, text="Complete Task")
+        self.complete_task_button.grid(column=2,row=0)
         
         ## Completed Task
         
