@@ -53,7 +53,7 @@ class MainWindow(tk.Frame):
         self.skip_task_button.grid(column=1, row=0)
         
         self.complete_task_button = ttk.Button(self.current_task_button_frame, text="Complete Task")
-        self.complete_task_button.grid(column=2,row=0)
+        self.complete_task_button.grid(column=2, row=0)
         
         ## Completed Task
         
