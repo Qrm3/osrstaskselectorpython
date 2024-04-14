@@ -19,9 +19,10 @@ class MainWindow(tk.Frame):
         
         # tabs
         self.current_task_tab = ttk.Frame(self.notebook)
-        self.current_task_tab.columnconfigure(0, weight=1)
+        self.current_task_tab.grid_columnconfigure(0, weight=1)
         
         self.create_task_tab = ttk.Frame(self.notebook)
+        self.create_task_tab.grid_columnconfigure(1, weight=1)
         
         self.completed_task_tab = ttk.Frame(self.notebook)
         
@@ -55,35 +56,25 @@ class MainWindow(tk.Frame):
         self.complete_task_button = ttk.Button(self.current_task_button_frame, text="Complete Task")
         self.complete_task_button.grid(column=2, row=0)
         
+        ## Create Task
+        # labels
+        self.create_task_name_label = ttk.Label(self.create_task_tab, text="Name:")
+        self.create_task_name_label.grid(column=0, row=0, sticky=tk.W)
+        
+        self.create_task_description_label = ttk.Label(self.create_task_tab, text="Description:")
+        self.create_task_description_label.grid(column=0, row=1, sticky=tk.W)
+        
+        # entries
+        self.create_task_name_textbox = ttk.Entry(self.create_task_tab)
+        self.create_task_name_textbox.grid(column=1, row=0, sticky=tk.EW)
+        
+        self.create_task_description_textbox = ttk.Entry(self.create_task_tab)
+        self.create_task_description_textbox.grid(column=1, row=1, sticky=tk.EW)
+        
+        
+        
         ## Completed Task
         
-        ## Create Task
-        
-        
-        
-        # ~~~~~~ OLD STUFF Swapping to ttk ~~~~~~
-        # ### Current Task
-        # self.current_task_labelframe = tk.LabelFrame(self, padx=2, pady=2, text="Current Task")
-        # self.current_task_labelframe.grid_columnconfigure(0, weight=1)
-        # self.current_task_labelframe.grid(sticky=tk.EW)
-        # # Task Name
-        # self.current_task_name_label = tk.Label(self.current_task_labelframe, text="Current Task Name")
-        # self.current_task_name_label.grid(sticky=tk.EW)
-        # # Task Description        
-        # self.current_task_description_label = tk.Label(self.current_task_labelframe, padx=2, pady=2, anchor=tk.W, text="Current Task Description")
-        # self.current_task_description_label.grid(sticky=tk.EW)
-        # ### Task Buttons        
-        # self.task_button_frame = tk.Frame(self, padx=2, pady=2)
-        # self.task_button_frame.grid(sticky=tk.E)
-        # # Get Task
-        # self.get_task_button = tk.Button(self.task_button_frame, text="Get Task")
-        # self.get_task_button.grid(column=0, row=0)
-        # # Skip Task
-        # self.skip_task_button = tk.Button(self.task_button_frame, text="Skip Task")
-        # self.skip_task_button.grid(column=1, row=0)
-        # # Complete Task
-        # self.complete_task_button = tk.Button(self.task_button_frame, text="Complete Task")
-        # self.complete_task_button.grid(column=2, row=0)
         # ### New Task
         # self.new_task_labelframe = tk.LabelFrame(self, padx=2, pady=2, text="New Task")
         # self.new_task_labelframe.columnconfigure(1, weight=1)
